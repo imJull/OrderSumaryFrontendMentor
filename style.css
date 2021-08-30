@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;1,700;1,900&display=swap');
+
+:root{
+    --ColorPripaleblue: hsl(225, 100%, 94%);
+    --ColorPrimligbBlue: hsl(245, 75%, 52%);
+    --ColorNpaleBlue: hsl(225, 100%, 98%);
+    --ColorDesaBlue: hsl(224, 23%, 55%);
+    --ColorDarkblue: hsl(223, 47%, 23%);
+    --FontSizeP: 16px;
+    --FontType: "Red Hat Display", sans-serif;
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--FontType);
+    background-color: var(--ColorPripaleblue);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p{
+    font-size: var(--FontSizeP);
+    line-height: 1.6;
+    color: var(--ColorDesaBlue);
+}
+
+.bg_image{
+    background: url('./images/pattern-background-mobile.svg') no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+}
+button{
+    font-family: var(--FontType);
+}
+
+.btn{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: var(--FontSizeP);
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.btn-change{
+    background-color: transparent;
+    color: var(--ColorPrimligbBlue);
+    text-decoration: underline;
+}
+
+.btn-primary{
+    background-color: var(--ColorPrimligbBlue);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.btn-primary:hover, .btn-change{
+    opacity: 0.8;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    color: var(--ColorDesaBlue);
+    transition-property: color;
+}
+
+.btn-secondary:hover{
+    color: var(--ColorDarkblue);
+}
+
+.container{
+    background-color: white;
+    margin: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px --ColorDarkblue;
+}
+
+.container .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .pricing{
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--ColorNpaleBlue);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .pricing article{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .pricing article img{
+    margin-right: 10px;
+
+}
+
+.container h1{
+    color: var(--ColorDarkblue);
+    margin: 10px 0;
+}
+.container .desc{
+    padding: 0 20px;
+}
+.container img.hero{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+@media (min-width: 768px) {
+    .bg_image{
+        background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+        height: 50vh;
+    }
+
+    .container{
+        width: 500px;
+    }
+    
+}
